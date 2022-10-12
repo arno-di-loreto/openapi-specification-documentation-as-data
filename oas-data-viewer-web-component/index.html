@@ -104,7 +104,7 @@
 
       function onVersionClick(event){
         console.log('onVersionClick', event);
-        const version = event.path[0];
+        const version = event.composedPath()[0];
         const viewer = document.querySelector('specification-viewer');
         const dataFile = '../specifications-data/'+version.textContent+'.json';
         console.log('data file', dataFile);

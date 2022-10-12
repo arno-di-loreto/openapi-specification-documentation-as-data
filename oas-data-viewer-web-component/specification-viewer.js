@@ -692,7 +692,7 @@ class SpecificationViewer extends HTMLElement {
   }
 
   onclick(event) {
-    const elementClicked = event.path[0];
+    const elementClicked = event.composedPath()[0];
     const dataAction = elementClicked.getAttribute('data-action');
     if(dataAction == 'children'){
       this.showHideChildren(elementClicked);
